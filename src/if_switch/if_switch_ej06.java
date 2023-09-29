@@ -2,7 +2,7 @@ package if_switch;
 
 import java.util.Scanner;
 
-public class if_switch_ej6 {
+public class if_switch_ej06 {
     public static void main(String[] args) {
         /*
         Realiza un programa que calcule el tiempo que tardará en caer un objeto desde una altura h.

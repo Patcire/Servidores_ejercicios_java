@@ -2,7 +2,7 @@ package if_switch;
 
 import java.util.Scanner;
 
-public class if_switch_ej4 {
+public class if_switch_ej04 {
     public static void main(String[] args) {
 
         /*

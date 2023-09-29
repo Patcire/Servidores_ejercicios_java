@@ -2,8 +2,8 @@ package if_switch;
 
 
 import java.util.Scanner;
-import java.util.ArrayList;
-public class if_switch_ej8 {
+
+public class if_switch_ej08 {
     public static void main(String[] args) {
 
         /*
