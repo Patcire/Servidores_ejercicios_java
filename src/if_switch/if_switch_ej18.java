@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 class error_longitud extends Exception { //voy a crear una excepción para conrolar que no se pase de 5 dígitos
 
-    public error_longitud() {}
     public error_longitud(String error) {
         super(error);
     }
