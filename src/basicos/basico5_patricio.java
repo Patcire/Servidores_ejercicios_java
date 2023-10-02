@@ -1,7 +1,5 @@
 package basicos;
 
-import java.util.Scanner;
-
 public class basico5_patricio {
     public static void main(String[] args) {
 
