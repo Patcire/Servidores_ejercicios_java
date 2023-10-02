@@ -13,7 +13,5 @@ public class bucles_ej4 {
             System.out.println(inicio);
         }
 
-        Scanner leer = new Scanner(System.in);
-        System.out.println("");
     }
 }
