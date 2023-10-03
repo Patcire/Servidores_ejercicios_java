@@ -3,7 +3,7 @@ package arrays_unid;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class array_unid_ej6 {
+public class array_unid_ej06 {
     public static void main(String[] args) {
 
         /*
