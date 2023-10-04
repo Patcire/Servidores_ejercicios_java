@@ -27,7 +27,7 @@ public class array_unid_ej06 {
 
         int ultimo_num= lista_num.get(tamanio_lista-1);
         for (int i=tamanio_lista-1;i>0;i--){ //lo hago en otro bucle for porque así lo indica el enunciado,
-            // tamanio_lista-1 xq el último número lo gestiono aparte
+
                 int numero = lista_num.get(i-1); // el elemento anterior
                 lista_num.set(i, numero);
             }
