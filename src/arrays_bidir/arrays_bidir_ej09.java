@@ -2,8 +2,6 @@ package arrays_bidir;
 
 import numeros_aleatorios.Aleatorio;
 
-import java.util.Scanner;
-
 public class arrays_bidir_ej09 {
     public static void main(String[] args) {
         /*
@@ -19,6 +17,7 @@ public class arrays_bidir_ej09 {
 
         //almacenamos los num aleatorios e imprimimos el array
         int[][] numeros= new int[4][4];
+        System.out.println("Matriz normal");
         for (int fila = 0; fila <numeros.length; fila++){
             for (int colum=0; colum<numeros[fila].length; colum++){
                 numeros[fila][colum]= Aleatorio.entero_aleatorio(0, 9);
@@ -34,26 +33,34 @@ public class arrays_bidir_ej09 {
         // -La primera mitad de las columnas gira hacia arriba, la otra hacia abajo
         // -La primera mitad de las filas se desplaza hacia la derecha, la otra hacia la izq
 
-        int almacen_ultima_casilla=0;
-        int almacen_celda_actual=0;
-        for (int fila=0; fila<numeros.length; fila++){
-            for (int columna=0; columna<numeros[fila].length; columna++){
-               almacen_ultima_casilla=numeros[fila][numeros[fila].length-1];
 
+            int numero_filas = numeros.length;
+
+            for (int capa = 0; capa < numero_filas / 2; capa++) {
+                int primero = capa;
+                int ultimo = numero_filas - 1 - capa;
+
+                for (int i = primero; i < ultimo; i++) {
+                    int elemento_inicial = numeros[primero][i];
+                    // movemos el elemento de la parte superior a la izquierda
+                    numeros[primero][i] = numeros[ultimo - (i - primero)][primero];
+                    // elemento de la parte izquierda a la parte superior
+                    numeros[ultimo - (i - primero)][primero] = numeros[ultimo][ultimo - (i - primero)];
+                    // el elemento de la parte inferior a la izquierda
+                    numeros[ultimo][ultimo - (i - primero)] = numeros[i][ultimo];
+                    // ponemos al ultimo el valor inicial
+                    numeros[i][ultimo] = elemento_inicial;
                 }
             }
 
-            System.out.println();
-
-        //Imprimimos el array
-        for (int fila=0; fila<numeros.length; fila++){
-            for (int columna=0; columna<numeros[fila].length; columna++){
-                System.out.print(numeros[fila][columna]+" ");
+        System.out.println();
+        System.out.println("Matriz rotada:");
+        for (int fila = 0; fila <numeros.length; fila++){
+            for (int colum=0; colum<numeros[fila].length; colum++){
+                System.out.print(numeros[fila][colum]+" ");
             }
             System.out.println();
         }
-
-        //NO
 
     }
 }
