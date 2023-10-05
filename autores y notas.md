@@ -1,4 +1,4 @@
-Ejercicios Java 00-04 
+Ejercicios Java 00-06 para practicar. 
 
 Trabajo realizado por Patricio Cifredo Reyes y Simon Patrick Reyes.
 
